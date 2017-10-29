@@ -1,0 +1,284 @@
+Preamble
+
+If you have built a Hackintosh before this is not the same process, there is no Multibeast or separate USB bootloader.
+You will be prepping the drive that your machine will run off of directly
+Use a SATA SSD for this process
+Use a real mac for everything before the "First Boot"(aside from copying the files to a fat32 formatted usb drive)
+Read all the instructions before you begin
+Understand all the instructions before you begin
+If you don't understand something use the internet to learn more about it
+If you don't understand how it all works you are in for a world of pain if something goes wrong
+Follow the instructions
+Follow the instructions
+Follow the instructions
+Unless you are advised to deviate based on Sin, Tom, Alex or Ryan's recommendation
+Once your system is stable (we will have a checklist) Make a work functional back up.
+This is insurance.
+If something goes wrong on-set you can boot from your back up and keep working
+Preparing the Install
+
+EVERYTHING PRIOR TO "FIRST BOOT" SHOULD BE DONE ON A REAL MAC
+Gather All the Software
+
+    Download the Hack-Wack folder.
+    This includes Clover Configurator, BIOS Firmware Update, BIOS settings profile, EFI folder and some post install files
+    Source a copy of "Install macOS Sierra" v12.4.06
+
+Format Sierra Installation Drive
+
+    Open disk utility
+    Select drive
+    Click "erase"
+    Name drive
+    HFS+ format
+    (Mac OS Ext)
+    GUID type
+
+Install Base System Files
+
+    Right-Click on the installer and click "Open"
+    When prompted about security click "Open"
+    Start installer
+    Click "Continue"
+    Click "Agree"
+    Click "Show all drives"
+    Select drive you just formatted
+    Click "Install"
+    Let the process finish and allow the computer to restart and continue the installation
+    Once installation finishes the computer will restart
+    DO NOT let it boot from the new drive.
+    When the computer restarts hold down the "option" key to boot into your main system drive
+
+Clover Configurator & Clover EFI
+Running Configurator
+
+    Move the Clover Configurator to your Desktop
+    Open Clover configurator(the first time you run it you may have to right-click and open, depending on your security settings)
+    Go to the "Clover Configurator" menu and "Check for Updates"
+    On the left hand side under "Tools" go to the "Install/Update Clover" tab
+    Click "Check for Updates"
+    Check "Save to Desktop"
+
+Clover EFI
+
+    Once the update has been downloaded, the Installer for Clover EFI Bootloader will open up
+    Click "Continue"
+    Click "Continue"
+    Click "Change Location"
+    Select the Drive you formatted in the previous steps and click "Continue"
+    You will be taken back to the previous screen.
+    Now click "Customize"
+    Now check only the following boxes
+        "Install for UEFI booting only"
+        "Install Clover in the ESP"
+        under "Drivers64UEFI" Select "OsxAptioFixDrv-64"
+    then click "Install".
+
+EFI Modifications
+
+The installation process has created a new partition on your SSD called "EFI". It should be mounted on your desktop.
+
+    Navigate to the "EFI>EFI>Clover>kexts>10.12" folder
+    copy the files located in the Hack-Wack>EFI>Clover>kexts>10.12 folder to the empty EFI>EFI>Clover>kexts>10.12 folder
+    Now copy the "drivers64"and "drivers64UEFI"folders found in Hack-Wack>EFI>Clover to EFI>EFI>Clover>
+        If prompted confirm the overwrite
+    Next copy the contents of Hack-Wack>EFI>Clover>ACPI>patched to EFI>EFI>Clover>ACPI>patched
+    With clover, File>Open the config.plist found in the Hack-Wack>EFI>Clover folder
+    Go to the SMBIOS tab found on the left hand side
+    Click the magic wand button
+    Click the icon that looks like a nMacPro
+    Change "Mac Pro (2,1) - LGA775" to "Mac Pro (6,1) - Intel Xeon (Ivy Bridge-EP)"
+    Click the two "Shake" buttons on the far right to randomize the serial number
+    click "OK"
+    Go File>Duplicate
+    then File>Move To
+    Navigate to the EFI partition on your Hackintosh drive and save the file to EFI>EFI>Clover> and click "OK" (leave the checkbox un-checked)
+    It will ask if you want to overwrite the existing file, click yes
+    Right-click on your EFI partition in finder and click "Eject"
+    When prompted select "Eject All"
+
+First Boot
+Update BIOS
+
+    Format a USB drive as FAT16 or FAT32
+    Copy the "BIOS Settings" and "BIOSFirmware" folders from the Hack_Wack_zip to the USB drive
+    Insert the USB stick into the HackWack PC, boot up and press the “end” key at the mobo splash screen to enter bios q-flash
+    Click Update BIOS
+    at bottom center theres a pull down menu of drives, find your drive
+    click on the USB drive in the big gray box above your drive
+    click on the bios firmware folder
+    X99DEX.F4e should be in the right large gray box
+    click X99DEX.F4e
+    it turns red and moves to the right of your drive
+    hit return/enter
+    Select Intact
+    System reboots
+    Hit F9 on reboot to see system info and new bios Version: F4e
+
+BIOS Setup
+
+    Plug the hard drive into your motherboard (sata and power cables)
+    Turn on your machine
+    When the motherboard splash screen appears pres (DEL) to enter the BIOS settings menu
+    If you haven't already updated your BIOS do so now (go back to the BIOS Update section)
+    Load the Bios settings onto a fat32 formatted usb stick and plug it into the computer
+    Hit the right arrow 6 times to get to the "Save & Exit" menue
+    Hit the down arrow 6 times to get to the "Load Profiles" menu and hit "Enter"
+    The "Load Profiles" menu will pop up. Hit the up arrow once to select "Select File in HDD/FDD/USB" and hit "Enter"
+    Use the mouse to click the little red arrow just above the "Ok" button. This should bring up a Drop-down menu.
+    Select your USB stick from the Drop-down
+    Use the mouse to click the "Bios Settings" folder
+    Then double-click The "HackWackBase" file
+    You will get a confirmation pop-up that the settings were loaded, click "OK"
+    Hit the left arrow 4 times to get to the "BIOS" menu
+    Make sure "Boot Option #1" is selected and hit "Enter"
+    Use the up and down arrows to select the "UEFI OS" portion of your install drive and hit "Enter"
+    Arrow back over to the "Save & Exit" menu
+    Arrow up or down to "Save & Exit Setup" and hit "Enter"
+    The Machine will now reboot and
+    Clover bootloader will now start
+
+Clover Bootloader
+
+    Hit the <Right Arrow> key until "Options" is selected
+    Hit (Enter) to load the Options Menu
+    Hit (Enter) to begin modifying the "Boot Args"
+    You can use the (Left Arrow) and (RIght Arrow) to navigate the field
+    Delete the argument "nvda_drv=1"
+    Now type in the argument "nv_disable=1" this temporarily disables Nvidia drivers, until you install the needed web drivers
+    Press (Enter), then arrow down to "Return" and press (Enter) again.
+
+Finalize Installation
+
+    At the Clover Boot Manager screen, select "Boot macOS from [SSD Name]"
+    Set up your system just like you would normally
+    Go through the whole user setup
+    Any wifi or network setup will have to be skipped at this point
+    Install IntelMausiEthernet-v2.2.1d1.pkg (make sure to check the installation drive by going to "Change Location")
+    Install Nvidia Web drivers
+
+Second Boot
+AppleGraphicsPolicy Fix
+
+    Reboot again replacing nvda_drv=1 with nv_disable=1
+    Once booted we will follow method #4 found here https://www.tonymacx86.com/threads/solving-nvidia-driver-install-loading-problems.161256/#Problem4
+    Method 4: (I have paraphrased for our specific use)
+        Open Terminal
+        Enter this command (it is one line)
+
+            sudo nano /System/Library/Extensions/AppleGraphicsControl.kext/Contents/PlugIns/AppleGraphicsDevicePolicy.kext/Contents/Info.plist
+
+        Arrow down to where you see <key>ConfigMap</key>
+        For the MacPro6,1 locate the board-id "Mac-F60DEB81FF30ACF6" and change string below it from "Config1" to "none".
+        Save the file by pressing CTRL+O, then enter.
+        Exit by pressing CTRL+X
+        Rebuild the kernel cache using the following two commands in terminal:
+            sudo kextcache -system-prelinked-kernel hit "Enter"
+
+                the above may throw an error but you can ignore it.
+
+            sudo kextcache -system-caches hit "Enter"
+
+                this command wont ask for your password again, when its complete it will just show you the prompt again
+
+Audio Fix
+
+THIS STEP WILL NOT WORK UNTIL YOU HAVE INTERNET
+
+    Using Clover Configurator once again mount our EFI partition
+    Open Clover Configurator
+    Under the "Tools" section on the left-hand side click "Mount EFI"
+    Click "Mount Partition" on the right-hand side next to your Hack-Wack install drive
+    Open Terminal
+    Drag audio_cloverALC-120.sh from Hack-Wack>PostInstall>audio_CloverALC-master into the Terminal
+    Hit "Enter"
+    Enter your password and hit "Enter" again
+    you will hit 'y' 5 times in total to accept the changes being made
+
+Second Ethernet Port (i211)
+
+    Download the i211 kext files here
+    Install the Smalltree driver package
+    Install the kexts in the i211.zip using kextdrop or some other valid method.
+    Files must be installed to /System/Library/Extensions - they may not work if in /Library/Extensions or in clover's kext folders
+    reboot
+
+Third Boot
+
+    Reboot (This time you dont need to modify the boot flags and can just hit enter at the clover boot screen)
+    Install Cuda
+    Install Blackmagic Desktop Video
+    Install DaVinci Resolve
+    Install Codex Software
+    Install Livegrade
+    Install SilverStack
+    Install anything else you need to function
+
+Once everything is installed that you need to function bare minimum its time to do a clone of your drive
+BACK UP YOUR INSTALL
+DO NOT DO ANY OSX UPGRADES
+GC-ALPINE RIDGE (TB Card) UPDATE
+
+To use the TB adapter card you will have to do a few things first
+Prerequisites
+
+    Windows installed on your hack (using windows 10 for the guide)
+    Access to internet
+    Plug TB card into last slot only (PCIEX8)
+    Plug the Thunderbolt power cable into the back of the TB card, then plug the other end into your motherboard: to the left of the Mobo power connector, under your GPU. You will probably have to take the GPU out to plug this cable in.
+
+Download Firmware Updater
+
+Both the mobo and the Alpine Ridge card need to be updated to firmware v. 21. There are two separate firmware updater utilities; one for the Alpine Ridge card (linked in Step 2 below) and one for the mobo (linked in the Downgrade Drivers section).
+
+    Boot up into Windows
+    Go Here
+    Scroll down to the "Utilities" section and click to expand.
+    Click one of the download locations. I chose "America", why not
+    Save the file according to your browser. This is the updater for your Alpine Ridge card, not your mobo.
+    DO NOT download the Thunderbolt driver from this page, only the firmware update tool.
+
+Install Update
+
+    Find the download
+    Double-click "setup.exe"
+    Click yes to allow the app to make changes to the device
+    Click "next" at the "FashTBT B16.1118.1" screen
+    Click "Finish"
+
+Downgrade Drivers
+
+Now the drivers need to be downgraded from v. 16.2.52.250 to v. 16.1.47.275, and the mobo firmware needs updating to v. 21.
+
+    In Windows, uninstall "Thunderbolt Software".
+    Once its done go here to download Thunderbolt FW Update Tool (under Utilities) and the TB driver (Driver--Thunderbolt): Here
+
+        The Firmware Update Tool on that page is for your mobo, not your Alpine Ridge card. You will need to run this Updater in addition to the previous Updater. The driver here is the older version required for Hack compatibility.
+
+    Install the older drivers
+
+Check BIOS Settings
+
+    Reboot
+    Hit the Delete key to enter BIOS
+    Go to the Peripherals" tab
+    Got to "Intel(R) Thunderbolt" and hit Enter to go to the Thunderbolt sub-menu
+    Make sure PCI cache is set to 128
+    Make sure Prefetch is set to 256, you can change it by clicking on the number and typing in "256"
+    Set the Security setting to Legacy
+    Recommended: Re-save your profile to a slot
+    Now Save and Exit
+
+Back to the Hack
+
+    Now that you have done all this you can boot back into your Hackintosh BUT FIRST
+    Go into the boot options in the Clover menu and add "-s" so that the machine boots into single user mode
+    Boot
+    When the boot hangs type in "$exit" hit Enter
+    then type "exit" and enter again
+    there you go!
+
+IMPORTANT NOTES
+Not hot swappable
+Must cold-boot with devices plugged in
+Must populate port "1" to enable port "2"
