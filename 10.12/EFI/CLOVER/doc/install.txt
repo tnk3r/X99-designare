@@ -1,7 +1,5 @@
-Preamble
-
 If you have built a Hackintosh before this is not the same process, there is no Multibeast or separate USB bootloader.
-You will be prepping the drive that your machine will run off of directly
+You will be prepping the drive that your machine will run off of directly from a Macbook Pro or Real Mac
 Use a SATA SSD for this process
 Use a real mac for everything before the "First Boot"(aside from copying the files to a fat32 formatted usb drive)
 Read all the instructions before you begin
