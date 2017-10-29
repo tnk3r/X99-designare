@@ -1,0 +1,199 @@
+
+Clover EFI installer log - Thu Apr 27 22:46:35 PDT 2017
+Installer version: v2.4k r4061 EFI bootloader
+======================================================
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *256.1 GB   disk0
+   1:           Windows Recovery                         471.9 MB   disk0s1
+   2:                        EFI NO NAME                 104.9 MB   disk0s2
+   3:         Microsoft Reserved                         16.8 MB    disk0s3
+   4:       Microsoft Basic Data Windows 10              254.6 GB   disk0s4
+   5:           Windows Recovery                         820.0 MB   disk0s5
+
+/dev/disk1 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *750.2 GB   disk1
+   1:                        EFI EFI                     209.7 MB   disk1s1
+   2:                  Apple_HFS macOS                   749.3 GB   disk1s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk1s3
+
+/dev/disk2 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk2
+   1:                        EFI EFI                     209.7 MB   disk2s1
+   2: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               2.0 TB     disk2s2
+   3:                 Apple_Boot Boot OSX                134.2 MB   disk2s3
+   4: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk2s5
+
+/dev/disk3 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk3
+   1:                        EFI EFI                     209.7 MB   disk3s1
+   2: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               2.0 TB     disk3s2
+   3:                 Apple_Boot Boot OSX                134.2 MB   disk3s3
+   4: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk3s5
+
+/dev/disk4 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk4
+   1:                        EFI EFI                     209.7 MB   disk4s1
+   2: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               2.0 TB     disk4s2
+   3:                 Apple_Boot Boot OSX                134.2 MB   disk4s3
+   4: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk4s5
+
+/dev/disk5 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk5
+   1:                        EFI EFI                     209.7 MB   disk5s1
+   2: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               2.0 TB     disk5s2
+   3:                 Apple_Boot Boot OSX                134.2 MB   disk5s3
+   4: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk5s5
+
+/dev/disk6 (virtual):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                  Apple_HFS EVORAID8               +8.0 TB     disk6
+
+/dev/disk7 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk7
+   1:                        EFI EFI                     209.7 MB   disk7s1
+   2:                 Apple_RAID                         2.0 TB     disk7s2
+   3:                 Apple_Boot Boot OS X               134.2 MB   disk7s3
+
+/dev/disk8 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *2.0 TB     disk8
+   1:                        EFI EFI                     209.7 MB   disk8s1
+   2:                 Apple_RAID                         2.0 TB     disk8s2
+   3:                 Apple_Boot Boot OS X               134.2 MB   disk8s3
+
+/dev/disk9 (external, virtual):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                  Apple_HFS AK_TB_DTO_2T2_R0       +4.0 TB     disk9
+
+/dev/disk10 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk10
+   1:                        EFI EFI                     209.7 MB   disk10s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk10s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk10s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk10s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk10s5
+
+/dev/disk11 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk11
+   1:                        EFI EFI                     209.7 MB   disk11s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk11s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk11s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk11s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk11s5
+
+/dev/disk12 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk12
+   1:                        EFI EFI                     209.7 MB   disk12s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk12s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk12s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk12s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk12s5
+
+/dev/disk13 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk13
+   1:                        EFI EFI                     209.7 MB   disk13s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk13s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk13s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk13s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk13s5
+
+/dev/disk14 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk14
+   1:                        EFI EFI                     209.7 MB   disk14s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk14s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk14s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk14s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk14s5
+
+/dev/disk15 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk15
+   1:                        EFI EFI                     209.7 MB   disk15s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk15s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk15s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk15s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk15s5
+
+/dev/disk16 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk16
+   1:                        EFI EFI                     209.7 MB   disk16s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk16s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk16s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk16s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk16s5
+
+/dev/disk17 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk17
+   1:                        EFI EFI                     209.7 MB   disk17s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk17s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk17s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk17s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk17s5
+
+/dev/disk18 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk18
+   1:                        EFI EFI                     209.7 MB   disk18s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk18s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk18s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk18s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk18s5
+
+/dev/disk19 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk19
+   1:                        EFI EFI                     209.7 MB   disk19s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk19s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk19s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk19s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk19s5
+
+/dev/disk20 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk20
+   1:                        EFI EFI                     209.7 MB   disk20s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk20s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk20s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk20s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk20s5
+
+/dev/disk21 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *1.0 TB     disk21
+   1:                        EFI EFI                     209.7 MB   disk21s1
+   2: B6FA30DA-92D2-4A9A-96F1-871EC6486200               2.3 MB     disk21s2
+   3: 2E313465-19B9-463F-8126-8A7993773801               7.3 MB     disk21s3
+   4: FA709C7E-65B1-4593-BFD5-E71D61DE9B02               999.9 GB   disk21s4
+   5:                 Apple_Boot Boot OSX                134.2 MB   disk21s5
+
+/dev/disk22 (virtual):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                  Apple_HFS 12TSR                  +12.0 TB    disk22
+
+======================================================
+Backing up EFI files
+
+Backing up /Volumes/macOS/EFIROOTDIR/EFI folder to /Volumes/macOS/EFI-Backups/r4049/2017-04-27-22h46/EFI
+======================================================
+Installing BootSectors/BootLoader
+
+Stage 0 - Don't write any of boot0af, boot0md, boot0ss to /
+Stage 1 - Don't write any of boot1h2, boot1f32alt, boot1xalt to /
+
+======================================================
+=========== Clover EFI Installation Finish ===========
+======================================================
